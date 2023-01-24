@@ -1,0 +1,12 @@
+name: locami
+
+packages:
+  - '*'
+
+scripts:
+  postclean: melos exec --flutter --concurrency=1 -- "flutter clean" && find . -type f -name "*.iml" -exec rm -f {} \;
+
+  generate: melos exec --concurrency=1 -- "flutter pub run build_runner build --delete-conflicting-outputs"
+
+  watch: melos exec --concurrency=1 -- "flutter pub run build_runner watch --delete-conflicting-outputs"
+
