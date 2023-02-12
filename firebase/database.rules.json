@@ -1,6 +1,6 @@
 {
   "rules": {
     ".read": "auth !== null",
-    ".write": "$uid === auth.uid"
+    ".write": "auth !== null"
   }
 }

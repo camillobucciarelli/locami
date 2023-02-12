@@ -1,0 +1,51 @@
+{
+  "home_page": {
+    "register": "Register",
+    "sign_in": "Sign in"
+  },
+  "registration_form": {
+    "buttons": {
+      "sign_in": "Sign in",
+      "submit": "Send registration"
+    },
+    "confirm_password": {
+      "error": {
+        "min_length": "Confirm password must be at least 6 characters long",
+        "must_match": "Passwords must match",
+        "required": "Confirm password is required"
+      },
+      "label": "Confirm password"
+    },
+    "email": {
+      "error": {
+        "email": "Email is not valid",
+        "required": "Email is required"
+      },
+      "label": "Email"
+    },
+    "first_name": {
+      "error": {
+        "min_length": "First name must be at least 3 characters long",
+        "required": "First name is required"
+      },
+      "label": "First name"
+    },
+    "last_name": {
+      "error": {
+        "min_length": "Last name must be at least 3 characters long",
+        "required": "Last name is required"
+      },
+      "label": "Last name"
+    },
+    "password": {
+      "error": {
+        "min_length": "Password must be at least 6 characters long",
+        "required": "Password is required"
+      },
+      "label": "Password"
+    }
+  },
+  "semantics_labels": {
+    "locami_logo": "Locami logo"
+  }
+}

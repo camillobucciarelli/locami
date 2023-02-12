@@ -9,25 +9,42 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_dotenv: ^5.0.2
   get_it: ^7.2.0
   injectable: ^2.1.0
   equatable: ^2.0.5
-  bloc: ^8.1.0
-  flutter_bloc: ^8.1.1
+  bloc: ^8.1.1
+  flutter_bloc: ^8.1.2
   reactive_forms: ^14.1.0
-  firebase_core: ^2.4.1
-  cloud_functions: ^4.0.7
-  cloud_firestore: ^4.3.1
-  firebase_auth: ^4.2.5
-  adaptive_dialog: ^1.8.1+1
-  go_router: ^6.0.1
+  firebase_core: ^2.5.0
+  cloud_functions: ^4.0.8
+  cloud_firestore: ^4.3.2
+  firebase_auth: ^4.2.6
+  adaptive_dialog: ^1.8.2
+  go_router: ^6.0.5
+  easy_localization: ^3.0.1
+  responsive_framework: ^0.2.0
+  flutter_svg: ^2.0.0+1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.1
   build_runner: ^2.3.3
+  build_verify: ^3.1.0
+  go_router_builder: ^1.1.0
   injectable_generator: ^2.1.3
+  dart_code_metrics: ^5.5.1
+  assets_gen: ^1.4.1
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - .env/
+    - assets/images/
+    - assets/translations/
+
+assets_gen:
+  output: core/theme/assets.g.dart
+  code_style: lowerCamelCase
