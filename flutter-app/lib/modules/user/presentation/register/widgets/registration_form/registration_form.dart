@@ -10,15 +10,12 @@ mixin RegistrationForm {
   final FormGroup form = FormGroup(
     {
       emailControlName: FormControl<String>(
-        value: 'email@email.it',
         validators: [Validators.required, Validators.email],
       ),
       passwordControlName: FormControl<String>(
-        value: 'password',
         validators: [Validators.required, Validators.minLength(6)],
       ),
       confirmPasswordControlName: FormControl<String>(
-        value: 'password',
         validators: [Validators.required, Validators.minLength(6)],
       ),
     },
