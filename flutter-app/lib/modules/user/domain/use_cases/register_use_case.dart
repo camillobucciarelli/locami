@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import '../../../../core/error_management/failure.dart';
 
 // Register new user with first name, last name, email, and password.
-Future<User> registerUseCase(String firstName, String lastName, String email, String password) async {
+Future<User> registerUseCase(String email, String password) async {
   return runSafety(
     () async {
       final userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
@@ -12,8 +12,6 @@ Future<User> registerUseCase(String firstName, String lastName, String email, St
       );
       final user = userCredential.user;
       if (user != null) {
-        await user.updateDisplayName('$firstName $lastName');
-
         return user;
       }
 

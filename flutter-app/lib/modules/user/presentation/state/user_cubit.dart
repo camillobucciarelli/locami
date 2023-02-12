@@ -16,12 +16,10 @@ class UserCubit extends Cubit<UserState> {
 
   // Register new user with first name, last name, email, and password.
   void register({
-    required String firstName,
-    required String lastName,
     required String email,
     required String password,
   }) {
-    registerUseCase(firstName, lastName, email, password).fold(
+    registerUseCase(email, password).fold(
       progress: () => emit(const RegisterProcessingState()),
       success: (user) => emit(UserSignedInState(user: user)),
       failure: (failure) {

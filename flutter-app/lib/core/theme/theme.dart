@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_framework/responsive_framework.dart';
 
-import 'breakpoints.dart';
 import 'color_schemes.dart';
 
 part 'spacing.dart';

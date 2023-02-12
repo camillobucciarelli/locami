@@ -43,6 +43,12 @@
         "required": "Password is required"
       },
       "label": "Password"
+    },
+    "errors": {
+      "weak_password": "Password is too weak",
+      "email_already_in_use": "Email is already in use",
+      "invalid_email": "Email is not valid",
+      "register_failure": "Something went wrong, please try again later"
     }
   },
   "semantics_labels": {
