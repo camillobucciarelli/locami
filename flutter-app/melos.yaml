@@ -4,14 +4,19 @@ packages:
   - '*'
   - _modules/*
 
+ide:
+  intellij: false
+
 scripts:
   postclean: melos exec --flutter --concurrency=1 -- "flutter clean" && find . -type f -name "*.iml" -exec rm -f {} \;
 
   generate: melos exec --concurrency=1 -- "flutter pub run build_runner build --delete-conflicting-outputs"
 
-  generate:assets: melos exec --flutter --concurrency=1 --fail-fast -- "flutter pub run assets_gen build"
+  generate_assets: melos exec --flutter --concurrency=1 --fail-fast -- "flutter pub run assets_gen build"
 
-  generate:locale:
+  upgrade_dependencies: melos exec --concurrency=1 -- "flutter pub upgrade --major-versions"
+
+  generate_locale:
     run: |
       melos exec --flutter --concurrency=1 --fail-fast -- \
       "flutter pub run easy_localization:generate -f keys -S "assets/translations" -O "lib/translations" -o "translations_keys.g.dart" --skip-unnecessary-keys"
@@ -19,7 +24,7 @@ scripts:
       depends-on:
         - "easy_localization"
 
-  dev.dependencies: |
+  dev_dependencies: |
     melos exec --concurrency=1 -- "flutter pub add \
     --dev \
     build_runner \
@@ -29,4 +34,3 @@ scripts:
     dart_code_metrics \
     assets_gen \
     "
-

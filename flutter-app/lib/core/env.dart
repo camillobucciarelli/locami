@@ -12,4 +12,6 @@ class Env {
   static int get functionsPort =>
       int.tryParse(dotenv.env['FUNCTIONS_PORT'] ?? (throw Exception('Missing env var: FUNCTIONS_PORT'))) ??
       (throw Exception('Invalid env var: FUNCTIONS_PORT'));
+
+  static bool get useEmulator => dotenv.env['USE_EMULATOR'] == 'true';
 }

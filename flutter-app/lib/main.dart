@@ -25,7 +25,7 @@ void main() {
 
     // Firebase section.
     await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-    if (kDebugMode) {
+    if (Env.useEmulator) {
       FirebaseFunctions.instanceFor(region: Env.functionsRegion)
           .useFunctionsEmulator(Env.functionsHostname, Env.functionsPort);
     }
