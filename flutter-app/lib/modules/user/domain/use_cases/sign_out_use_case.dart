@@ -4,7 +4,7 @@ import '../../../../core/error_management/failure.dart';
 
 // Sign out user.
 Future<void> signOutUseCase() {
-  return runSafety(
+  return runSafetyFuture(
     FirebaseAuth.instance.signOut,
     onException: (exception) => const SignOutGenericFailure(),
   );

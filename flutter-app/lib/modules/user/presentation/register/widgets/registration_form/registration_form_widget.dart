@@ -4,6 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
 import '../../../../../../common_ui/app_snack_bar.dart';
+import '../../../../../../common_ui/common_form_fields/email_field.dart';
+import '../../../../../../common_ui/common_form_fields/password_field.dart';
 import '../../../../../../common_ui/responsive/responsive_state.dart';
 import '../../../../../../common_ui/responsive/responsive_stateless_widget.dart';
 import '../../../../../../core/router/app_router.dart';
@@ -12,10 +14,6 @@ import '../../../../../../translations/translations_keys.g.dart';
 import '../../../state/user_cubit.dart';
 
 part 'confirm_password.dart';
-
-part 'email.dart';
-
-part 'password.dart';
 
 part 'registration_form.dart';
 
@@ -37,9 +35,9 @@ class _RegistrationFormWidgetState extends ResponsiveState<RegistrationFormWidge
       formGroup: form,
       child: Column(
         children: [
-          const _Email(),
+          const EmailField(controlName: RegistrationForm.emailControlName),
           const _Spacer(),
-          const _Password(),
+          const PasswordField(controlName: RegistrationForm.passwordControlName),
           const _Spacer(),
           const _ConfirmPassword(),
           const _Spacer(),

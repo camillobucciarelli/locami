@@ -14,9 +14,9 @@ class HomeRoute extends GoRouteData {
           return const Dashboard();
         }
 
-        return const  HomePage();
+        return const HomePage();
       },
-      buildWhen: (_, current) => current is UserStatusState,
+      buildWhen: (previous, current) => current is UserStatusState && previous != current,
     );
   }
 }

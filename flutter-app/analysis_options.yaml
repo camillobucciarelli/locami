@@ -68,10 +68,7 @@ dart_code_metrics:
     - avoid-returning-widgets:
         ignored-names:
           - testFunction
-    - no-equal-arguments:
-        ignored-parameters:
-          - height
-          - width
+    - no-equal-arguments: false
     - avoid-late-keyword: false
     - prefer-correct-identifier-length:
         exceptions: [ 'id' ]

@@ -18,7 +18,7 @@ class _Actions extends ResponsiveStatelessWidget {
         SizedBox(
           width: _buttonWidth,
           child: ElevatedButton(
-            onPressed: () => const LoginPageRoute().go(context),
+            onPressed: () => const SignInPageRoute().go(context),
             child: Text(LocaleKeys.home_page_sign_in.tr()),
           ),
         ),

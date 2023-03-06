@@ -14,7 +14,7 @@ class Application extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<UserCubit>(
-      create: (context) => injector(),
+      create: (context) => injector()..checkAuth(),
       child: ResponsiveSizer(
         builder: (context, orientation, deviceType) {
           return MaterialApp.router(

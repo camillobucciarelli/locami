@@ -4,7 +4,7 @@ import '../../../../core/error_management/failure.dart';
 
 // Sign in user with email and password.
 Future<User> signInUseCase(String email, String password) async {
-  return runSafety(
+  return runSafetyFuture(
     () async {
       final userCredential = await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: email,

@@ -23,14 +23,3 @@ scripts:
     select-package:
       depends-on:
         - "easy_localization"
-
-  dev_dependencies: |
-    melos exec --concurrency=1 -- "flutter pub add \
-    --dev \
-    build_runner \
-    build_verify \
-    go_router_builder \
-    injectable_generator \
-    dart_code_metrics \
-    assets_gen \
-    "

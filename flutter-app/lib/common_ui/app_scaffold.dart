@@ -4,29 +4,40 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import '../core/theme/theme.dart';
 
 class AppScaffold extends StatelessWidget {
-  final List<Widget> body;
+  final AppBar? appBar;
+  final List<Widget>? body;
+  final SliverChildListDelegate? bodyDelegate;
   final Color? backgroundColor;
   final EdgeInsets? padding;
   final BoxConstraints? constraints;
 
   const AppScaffold({
     super.key,
-    required this.body,
+    this.body,
+    this.bodyDelegate,
+    this.appBar,
     this.padding,
     this.constraints,
     this.backgroundColor,
-  });
+  }) : assert(body != null || bodyDelegate != null);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: appBar,
       body: Center(
         child: Container(
           constraints: constraints,
-          child: ListView(
+          child: CustomScrollView(
             shrinkWrap: true,
-            padding: padding ?? EdgeInsets.all(ResponsiveSpacing.xl.w),
-            children: body,
+            slivers: [
+              SliverPadding(
+                padding: padding ?? EdgeInsets.all(ResponsiveSpacing.xl.w),
+                sliver: SliverList(
+                  delegate: bodyDelegate ?? SliverChildListDelegate(body ?? []),
+                ),
+              ),
+            ],
           ),
         ),
       ),

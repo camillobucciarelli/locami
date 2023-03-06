@@ -8,7 +8,7 @@ import '../../core/error_management/failure.dart';
 // 🌎 Project imports:
 
 extension FutureExtension<T> on Future<T> {
-  void fold({
+  void actions({
     VoidCallback? progress,
     Function(T)? success,
     Function(Failure)? failure,

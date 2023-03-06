@@ -31,14 +31,14 @@ class ProfilePageRoute extends GoRouteData {
   Widget build(BuildContext context, GoRouterState state) => ProfilePage(uid: uid);
 }
 
-@TypedGoRoute<LoginPageRoute>(
-  path: '/login',
+@TypedGoRoute<SignInPageRoute>(
+  path: '/sign-in',
 )
-class LoginPageRoute extends GoRouteData {
-  const LoginPageRoute();
+class SignInPageRoute extends GoRouteData {
+  const SignInPageRoute();
 
   @override
-  Widget build(BuildContext context, GoRouterState state) => const LoginPage();
+  Widget build(BuildContext context, GoRouterState state) => const SignInPage();
 }
 
 @TypedGoRoute<RegisterPageRoute>(
