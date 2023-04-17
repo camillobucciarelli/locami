@@ -7,7 +7,7 @@ import '../../translations/translations_keys.g.dart';
 class PasswordField extends StatelessWidget {
   final String controlName;
 
-  const PasswordField({Key? key, required this.controlName}) : super(key: key);
+  const PasswordField({super.key, required this.controlName});
 
   @override
   Widget build(BuildContext context) {

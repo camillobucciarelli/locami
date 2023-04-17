@@ -20,6 +20,9 @@ class UserRoutes extends GoRouteData {
 
     return const HomeRoute().location;
   }
+
+  @override
+  Widget build(BuildContext context, GoRouterState state) => const SizedBox.shrink();
 }
 
 class ProfilePageRoute extends GoRouteData {

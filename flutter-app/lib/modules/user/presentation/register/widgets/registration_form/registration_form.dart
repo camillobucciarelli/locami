@@ -1,6 +1,6 @@
 part of 'registration_form_widget.dart';
 
-mixin RegistrationForm {
+mixin _RegistrationForm {
   // Form controls names
   static const String emailControlName = 'email';
   static const String passwordControlName = 'password';

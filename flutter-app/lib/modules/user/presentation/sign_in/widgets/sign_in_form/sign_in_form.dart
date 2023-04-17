@@ -1,6 +1,6 @@
 part of 'sign_in_form_widget.dart';
 
-mixin SignInForm {
+mixin _SignInForm {
   // Form controls names
   static const String emailControlName = 'email';
   static const String passwordControlName = 'password';

@@ -7,7 +7,7 @@ import '../../translations/translations_keys.g.dart';
 class EmailField extends StatelessWidget {
   final String controlName;
 
-  const EmailField({Key? key, required this.controlName}) : super(key: key);
+  const EmailField({super.key, required this.controlName});
 
   @override
   Widget build(BuildContext context) {

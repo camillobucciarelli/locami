@@ -4,6 +4,7 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import '../../../../common_ui/app_scaffold.dart';
 import '../../../../common_ui/responsive/responsive_stateless_widget.dart';
 import '../../../../core/theme/theme.dart';
+import 'create_project_form/create_project_form_widget.dart';
 
 class CreateProjectPage extends ResponsiveStatelessWidget {
   static const maxPageWidth = 750.0;
@@ -14,10 +15,11 @@ class CreateProjectPage extends ResponsiveStatelessWidget {
   Widget buildResponsive(BuildContext context, BoxConstraints constraints) {
     final verticalSpacing = ResponsiveSpacing.m.w;
 
-    return AppScaffold(
+    return const AppScaffold(
       body: [
+        CreateProjectFormWidget(),
       ],
-      constraints: const BoxConstraints(maxWidth: maxPageWidth),
+      constraints: BoxConstraints(maxWidth: maxPageWidth),
     );
   }
 }

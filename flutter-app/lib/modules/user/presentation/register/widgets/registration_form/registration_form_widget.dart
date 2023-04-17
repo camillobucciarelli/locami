@@ -17,8 +17,6 @@ part 'confirm_password.dart';
 
 part 'registration_form.dart';
 
-part 'spacer.dart';
-
 part 'submit_button.dart';
 
 class RegistrationFormWidget extends StatefulWidget {
@@ -28,19 +26,19 @@ class RegistrationFormWidget extends StatefulWidget {
   State<RegistrationFormWidget> createState() => _RegistrationFormWidgetState();
 }
 
-class _RegistrationFormWidgetState extends ResponsiveState<RegistrationFormWidget> with RegistrationForm {
+class _RegistrationFormWidgetState extends ResponsiveState<RegistrationFormWidget> with _RegistrationForm {
   @override
   Widget buildResponsive(BuildContext context, BoxConstraints constraints) {
     return ReactiveForm(
       formGroup: form,
       child: Column(
         children: [
-          const EmailField(controlName: RegistrationForm.emailControlName),
-          const _Spacer(),
-          const PasswordField(controlName: RegistrationForm.passwordControlName),
-          const _Spacer(),
+          const EmailField(controlName: _RegistrationForm.emailControlName),
+          const Spacer(),
+          const PasswordField(controlName: _RegistrationForm.passwordControlName),
+          const Spacer(),
           const _ConfirmPassword(),
-          const _Spacer(),
+          const Spacer(),
           _SubmitButton(_checkValidityAndRegister, unlockForm: unlockForm),
         ],
       ),

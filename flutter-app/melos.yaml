@@ -1,7 +1,7 @@
 name: locami
-
+sdkPath: .fvm/flutter_sdk
 packages:
-  - '*'
+  - .
   - _modules/*
 
 ide:
@@ -18,8 +18,5 @@ scripts:
 
   generate_locale:
     run: |
-      melos exec --flutter --concurrency=1 --fail-fast -- \
+      melos exec --flutter --concurrency=1 --fail-fast --depends-on="easy_localization" -- \
       "flutter pub run easy_localization:generate -f keys -S "assets/translations" -O "lib/translations" -o "translations_keys.g.dart" --skip-unnecessary-keys"
-    select-package:
-      depends-on:
-        - "easy_localization"

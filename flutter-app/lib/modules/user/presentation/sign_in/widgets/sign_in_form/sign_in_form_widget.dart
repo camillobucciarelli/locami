@@ -15,8 +15,6 @@ import '../../../state/user_cubit.dart';
 
 part 'sign_in_form.dart';
 
-part 'spacer.dart';
-
 part 'submit_button.dart';
 
 class SignInFormWidget extends StatefulWidget {
@@ -26,17 +24,17 @@ class SignInFormWidget extends StatefulWidget {
   State<SignInFormWidget> createState() => _SignInFormWidgetState();
 }
 
-class _SignInFormWidgetState extends ResponsiveState<SignInFormWidget> with SignInForm {
+class _SignInFormWidgetState extends ResponsiveState<SignInFormWidget> with _SignInForm {
   @override
   Widget buildResponsive(BuildContext context, BoxConstraints constraints) {
     return ReactiveForm(
       formGroup: form,
       child: Column(
         children: [
-          const EmailField(controlName: SignInForm.emailControlName),
-          const _Spacer(),
-          const PasswordField(controlName: SignInForm.passwordControlName),
-          const _Spacer(),
+          const EmailField(controlName: _SignInForm.emailControlName),
+          const Spacer(),
+          const PasswordField(controlName: _SignInForm.passwordControlName),
+          const Spacer(),
           _SubmitButton(_checkValidityAndSignIn, unlockForm: unlockForm),
         ],
       ),

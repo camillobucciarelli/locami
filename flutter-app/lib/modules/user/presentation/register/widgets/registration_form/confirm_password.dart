@@ -6,7 +6,7 @@ class _ConfirmPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ReactiveTextField(
-      formControlName: RegistrationForm.confirmPasswordControlName,
+      formControlName: _RegistrationForm.confirmPasswordControlName,
       validationMessages: {
         ValidationMessage.required: (_) => LocaleKeys.registration_form_confirm_password_error_required.tr(),
         ValidationMessage.minLength: (_) => LocaleKeys.registration_form_confirm_password_error_min_length.tr(),

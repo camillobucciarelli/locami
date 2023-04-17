@@ -10,20 +10,23 @@ class _SubmitButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<UserCubit, UserState>(
       builder: (context, state) {
-        return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          ElevatedButton(
-            onPressed: state is! SignInProcessingState ? onPressed : null,
-            child: SizedBox(
-              width: double.infinity,
-              child: Text(LocaleKeys.sign_in_form_buttons_submit.tr(), textAlign: TextAlign.center),
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: state is! SignInProcessingState ? onPressed : null,
+              child: SizedBox(
+                width: double.infinity,
+                child: Text(LocaleKeys.sign_in_form_buttons_submit.tr(), textAlign: TextAlign.center),
+              ),
             ),
-          ),
-          const SizedBox(height: Spacing.s),
-          if (state is SignInProcessingState) ...const [
-            SizedBox(height: Spacing.s),
-            LinearProgressIndicator(),
+            const SizedBox(height: Spacing.s),
+            if (state is SignInProcessingState) ...const [
+              SizedBox(height: Spacing.s),
+              LinearProgressIndicator(),
+            ],
           ],
-        ]);
+        );
       },
       listener: _listen,
       buildWhen: _buildWhen,

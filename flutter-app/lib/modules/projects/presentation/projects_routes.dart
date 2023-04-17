@@ -19,6 +19,9 @@ class ProjectsRoutes extends GoRouteData {
 
     return null;
   }
+
+  @override
+  Widget build(BuildContext context, GoRouterState state) => const SizedBox.shrink();
 }
 
 class CreateProjectPageRoute extends GoRouteData {

@@ -19,6 +19,38 @@
       "label": "Password"
     }
   },
+  "projects": {
+    "user_roles": {
+      "owner": "Owner",
+      "developer": "Developer",
+      "editor": "Editor"
+    },
+    "create_project_form": {
+      "title": "Create a new project",
+      "buttons": {
+        "submit": "Create project"
+      },
+      "errors": {
+        "create_project_failure": "Something went wrong, please try again later"
+      },
+      "name": {
+        "error": {
+          "max_length": "Name must be at most 50 characters long",
+          "min_length": "Name must be at least 3 characters long",
+          "required": "Name is required"
+        },
+        "label": "Name"
+      },
+      "description": {
+        "error": {
+          "max_length": "Description must be at most 500 characters long",
+          "min_length": "Description must be at least 3 characters long",
+          "required": "Description is required"
+        },
+        "label": "Description"
+      }
+    }
+  },
   "registration_form": {
     "buttons": {
       "submit": "Send registration"
