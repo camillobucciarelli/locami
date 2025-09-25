@@ -4,6 +4,7 @@ import '../../../common_ui/app_scaffold.dart';
 import '../../../common_ui/responsive/responsive_stateless_widget.dart';
 import '../../../core/theme/theme.dart';
 import '../../projects/presentation/home_widget/projects_home_widget.dart';
+import '../../translation_generator/view/translation_generator_page.dart';
 
 part 'widgets/large_screen_layout.dart';
 

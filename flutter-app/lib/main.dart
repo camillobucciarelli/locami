@@ -46,6 +46,7 @@ void main() {
     runApp(EasyLocalization(
       supportedLocales: const [
         Locale.fromSubtags(languageCode: 'en', countryCode: 'GB'),
+        Locale.fromSubtags(languageCode: 'it', countryCode: 'IT'),
       ],
       path: 'assets/translations',
       fallbackLocale: const Locale.fromSubtags(languageCode: 'en', countryCode: 'GB'),
